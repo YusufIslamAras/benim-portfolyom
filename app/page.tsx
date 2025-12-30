@@ -101,7 +101,7 @@ export default function Home() {
     {/* Güncel: Freelance */}
     <div className="relative">
       <div className="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.5)]"></div>
-      <h3 className="text-xl font-bold text-white">Full-Stack Freelance Developer</h3>
+      <h3 className="text-xl font-bold text-white">Full-Stack Developer</h3>
       <p className="text-blue-400 text-sm mb-2">2025 - Günümüz</p>
       <ul className="text-slate-400 text-sm list-disc list-inside space-y-1">
         <li>Şahin Lojistik için kapsamlı kurumsal web çözümleri.</li>
