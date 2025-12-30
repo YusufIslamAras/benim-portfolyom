@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Background from "@/components/Background"; // Yeni eklediğimiz arka plan
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,7 +14,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// Sitenin arama motorlarında ve tarayıcı sekmesinde görünecek bilgileri
+// Tarayıcı sekme bilgileri
 export const metadata: Metadata = {
   title: "Yusuf İslam Aras | Full-Stack Developer",
   description: "Bursa'da yaşayan, .NET ve Next.js ile modern çözümler üreten yazılımcı.",
@@ -25,14 +26,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="tr">
+    <html lang="tr" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-950`}
       >
-        {/* Navbar'ı buraya ekledik, böylece her sayfada en üstte görünecek */}
+        {/* Hareketli arka plan efekti en altta kalacak şekilde eklendi */}
+        <Background />
+        
+        {/* Navbar her zaman üstte kalacak */}
         <Navbar />
         
-        {children}
+        {/* Sayfa içerikleri */}
+        <div className="relative z-10">
+          {children}
+        </div>
       </body>
     </html>
   );

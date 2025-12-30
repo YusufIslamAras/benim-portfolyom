@@ -19,7 +19,7 @@ const Navbar = () => {
           {/* Logo Kısmı */}
           <div className="flex-shrink-0">
             <Link href="/" className="text-xl font-bold bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
-              YIA
+              Yusuf İslam Aras
             </Link>
           </div>
 
